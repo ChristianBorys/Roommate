@@ -5,14 +5,14 @@ class PropertiesController < ApplicationController
   end
 
   def new
-    @propterty = Property.new
+    @property = Property.new
   end
 
   def create
     @property = Property.new(property_params)
 
     if @property.save
-      redirect_to :index, notice: "Succesfully added #{@property.name} to the list of available properties."
+      redirect_to properties_path, notice: "Succesfully added #{@property.name} to the list of available properties."
     else
       flash.now[:alert] = "Something went wrong, please try again"
       render :new
