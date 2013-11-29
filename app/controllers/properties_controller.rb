@@ -31,6 +31,10 @@ class PropertiesController < ApplicationController
 
   end
 
+  def nav_state
+    @nav = :properties
+  end
+
   private
 
   def property_params
