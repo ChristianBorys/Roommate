@@ -1,5 +1,11 @@
 Roommate::Application.routes.draw do
+
+
+  root 'properties#index'
+
   devise_for :users
-  root 'welcome#index'
+
+  resources :properties
+  
 
 end

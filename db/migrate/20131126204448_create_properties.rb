@@ -2,8 +2,10 @@ class CreateProperties < ActiveRecord::Migration
   def change
     create_table :properties do |t|
 
+      t.string :name
       t.integer :rent
-      t.string :size
+      t.integer :bedrooms
+      t.integer :bathrooms
       t.string :address
       t.float :latitude
       t.float :longitude

@@ -22,8 +22,10 @@ ActiveRecord::Schema.define(version: 20131126204448) do
   end
 
   create_table "properties", force: true do |t|
+    t.string   "name"
     t.integer  "rent"
-    t.string   "size"
+    t.integer  "bedrooms"
+    t.integer  "bathrooms"
     t.string   "address"
     t.float    "latitude"
     t.float    "longitude"
