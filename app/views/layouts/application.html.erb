@@ -7,8 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="container">
 
-<%= yield %>
+    <%= render 'layouts/navbar' %>
+
+    <%= render 'layouts/alerts' %>
+
+    <span><%= "Signed in as: #{current_user.email}" if current_user %></span>
+
+
+    <%= yield %>
+  </div>
 
 </body>
 </html>

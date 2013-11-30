@@ -1,0 +1,18 @@
+<h1>Properties</h1>
+<%= link_to "new", new_property_path %>
+
+<% if @properties %>
+
+  <ul>
+    <% @properties.each do |prop| %>
+      <li><%=link_to prop.name, prop %>
+        <ul>
+          <li>Rent: <%= prop.rent %></li>
+          <li>Address: <%= prop.address %></li>
+          <li>Bedrooms/Bathrooms: <%= prop.bedrooms %>/<%= prop.bathrooms %></li>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+
+<% end %>
